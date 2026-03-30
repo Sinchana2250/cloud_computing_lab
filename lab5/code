@@ -1,1 +1,29 @@
+vi app.py
 
+from flask import Flask
+app=Flask(__name__)
+@app.route('/')
+def hello():
+    return "Hellp from CI/CD automated container!"
+if __name__ =="__main__":
+    app.run(host="0.0.0.0", port=8080)
+
+vi Dockerfile
+FROM python:3.10-slim
+WORKDIR /app
+COPY . .
+RUN pip install -r requirements.txt
+CMD ["python3","app.py"]
+
+vi requirements.txt
+flask
+
+deploy.sh
+PORT=8080
+echo "Building Docker image..."
+docker build -t myapp:latest .
+echo "stopping old containers..."
+docker stop myapp || true
+docker rm myapp || true
+echo "Running new container on port $PORT..."
+docker run -d --name myapp -p $PORT:8080 myapp:latest
