@@ -1,0 +1,12 @@
+terminal1
+gcloud services enable pubsub.googleapis.com
+gcloud pubsub topics create my-topic
+gcloud pubsub subscriptions create my-subscription --topic=my-topic
+gcloud pubsub topics publish my-topic --message="Hello,Pub/Sub!"
+gcloud pubsub subscriptions pull my-subscription --auto-ack 
+
+gcloud pubsub subscriptions pull my-subscription --auto-ack --limit=10
+
+terminal2
+ gcloud pubsub topics publish my-topic --message="Message 1"
+ gcloud pubsub topics publish my-topic --message="Message 1"
