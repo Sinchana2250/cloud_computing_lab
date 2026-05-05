@@ -1,0 +1,72 @@
+mkdir demo 
+cd demo
+echo "Hello Cloud Shell" > hello.txt 
+cat hello.txt 
+chmod +x hello.txt 
+ls -l 
+cd .. 
+File & Directory Management
+ mkdir test         
+ rmdir test         
+ rm file.txt        
+ rm -r folder        
+cp a.txt b.txt      
+mv a.txt folder/    
+Viewing & Editing Files cat file.txt        
+less file.txt      
+ head file.txt       
+tail file.txt      
+ nano file.txt       
+vi file.txt        
+ System Information 
+whoami        
+uname -a      
+df -h         
+du -sh *      
+free -h       
+uptime        
+
+Environment Variables & Shell
+ env               
+echo $HOME         
+export MYVAR=123   
+history
+clear
+
+
+1. Check active account
+ gcloud auth list
+ 2. Check active project 
+gcloud config list project 
+3. Get help 
+gcloud help 
+gcloud compute --help 
+4. List projects 
+gcloud projects list  
+
+
+cloudshell edit a.txt
+cat a.txt
+cloudshell edit test.py
+python3 test.py           
+
+Compute Engine (VMs) // Works only with Billing 
+1. List VM instances
+ gcloud compute instances list 
+2. Create a VM
+ gcloud compute instances create my-vm \ --zone=us-central1-a 
+3. Delete a VM 
+gcloud compute instances delete my-vm \ --zone=us-central1-a 
+
+
+1. List buckets 
+gcloud storage buckets list 
+2. Create a bucket 
+gcloud storage buckets create gs://my-bucket-name 
+🔹 App Engine 
+3. Deploy app 
+gcloud app deploy 
+4. View app gcloud app browse 
+🔹 IAM (Permissions)
+ List service accounts
+ gcloud iam service-accounts list 
