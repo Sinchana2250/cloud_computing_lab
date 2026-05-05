@@ -13,3 +13,16 @@ automatic_scaling:
     min_instances: 0
     max_instances: 5 
     target_cpu_utilization: 0.65
+
+vi.requirements.txt
+Flask==2.1.0 
+
+gcloud auth login
+gcloud init
+gcloud app deploy   
+
+gcloud app browse   
+
+Monitor and manage your app 
+You can monitor your application’s performance and scaling through the Google Cloud Console.
+The automatic scaling feature ensures that as your traffic increases, the app scales up and down automatically based on the usage. 
