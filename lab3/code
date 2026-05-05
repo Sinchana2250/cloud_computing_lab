@@ -7,14 +7,14 @@ def hello():
 if __name__=='__main__':
     app.run()
 
-vi.app.yaml
+vi app.yaml
 runtime: python39
 automatic_scaling:
     min_instances: 0
     max_instances: 5 
     target_cpu_utilization: 0.65
 
-vi.requirements.txt
+vi requirements.txt
 Flask==2.1.0 
 
 gcloud auth login
