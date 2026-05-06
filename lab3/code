@@ -25,4 +25,6 @@ gcloud app browse
 
 Monitor and manage your app 
 You can monitor your application’s performance and scaling through the Google Cloud Console.
-The automatic scaling feature ensures that as your traffic increases, the app scales up and down automatically based on the usage. 
+The automatic scaling feature ensures that as your traffic increases, the app scales up and down automatically based on the usage.
+
+python3 main.py
